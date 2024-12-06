@@ -65,13 +65,7 @@
     img {
         max-width: 100%;
         height: auto;
-        scale: 0 1;
-        animation: fade-in linear;
-        animation-timeline: scroll();
     }
 
-    @keyframes fade-in {
-        from {scale: .8; opacity: 0;}
-        to {scale: 1; opacity: 1;}
-    }
+
 </style>
