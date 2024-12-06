@@ -43,6 +43,13 @@
         width: calc(100vw - 2em);
         background-color: var(--accent-color2);
         padding: 0 1em;
+        animation: fade-in linear;
+        animation-timeline: view();
+    }
+
+    @keyframes fade-in {
+        from {scale: .8; opacity: 0;}
+        to {scale: 1; opacity: 1;}
     }
 
     .container {
