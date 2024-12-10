@@ -11,6 +11,10 @@
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';
     import SearchBar from '$lib/Molecules/SearchBar.svelte';
+
+    document.startViewTransition(async () => {
+	await domUpdate(); // mock function for demonstration purposes
+});
 </script>
 
 <Header/>
@@ -45,6 +49,7 @@
 <Footer/>
 
 <style>
+
 
     h1 {
         text-align: center;
