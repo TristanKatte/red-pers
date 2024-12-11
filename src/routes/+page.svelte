@@ -18,6 +18,9 @@
 
     return new Promise(resolve => {
         document.startViewTransition(async () => {
+            const mainContent = document.querySelector('main');
+            mainContent.classList.add('fade-out');
+            
             resolve()
             await navigation.complete()
         })
