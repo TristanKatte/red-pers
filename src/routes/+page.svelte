@@ -11,6 +11,20 @@
     import Header from '$lib/Organism/Header.svelte';
     import Artikel from '$lib/Organism/Artikel.svelte';
     import CategoryPreview from '$lib/Organism/CategoryPreview.svelte';
+    import { onNavigate } from '$app/navigation'
+
+    onNavigate ((navigation) => {
+    if (!document.startViewTransition) return
+
+    return new Promise(resolve => {
+        document.startViewTransition(async () => {
+            resolve()
+            await navigation.complete()
+        })
+    })
+})
+
+    
 
 </script>
 
@@ -37,9 +51,6 @@
 <Footer />
 
 <style>
-    @view-transition {
-  navigation: auto;
-}
     .background {
         background-color: #f5f5f5;
     }

@@ -16,6 +16,8 @@
     import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
   import { onMount } from "svelte";
+  
+  
 
     let sticky = false;
     
@@ -26,6 +28,11 @@
     onMount(() => {
         window.addEventListener("scroll", checkScroll);
     });
+
+    
+
+
+
 </script>
 
 <header>
