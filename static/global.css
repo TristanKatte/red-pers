@@ -255,11 +255,3 @@ blockquote::before {
     display: block;
 }
 
-:root {
-    view-transition-name: none;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-    animation-duration: 5s;
-}
