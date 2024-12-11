@@ -37,6 +37,9 @@
 <Footer />
 
 <style>
+    @view-transition {
+  navigation: auto;
+}
     .background {
         background-color: #f5f5f5;
     }
