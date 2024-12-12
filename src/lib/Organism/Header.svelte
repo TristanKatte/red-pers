@@ -349,10 +349,7 @@
         gap: 15px; 
         padding: 0;
         margin: 0;
-
-        &[aria-current='page']::before {
-  view-transition-name: active-page;
-}
+        
     }
 
     .boven li:hover {
