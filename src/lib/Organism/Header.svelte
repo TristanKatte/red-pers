@@ -16,7 +16,7 @@
     import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
   import { onMount } from "svelte";
-  
+
   
 
     let sticky = false;
@@ -121,6 +121,10 @@
 </header>
 
 <style>
+
+    header {
+        view-transition-name: header;
+    }
     #menuToggle {
         display: block;
         position: relative;
@@ -345,6 +349,10 @@
         gap: 15px; 
         padding: 0;
         margin: 0;
+
+        &[aria-current='page']::before {
+  view-transition-name: active-page;
+}
     }
 
     .boven li:hover {
@@ -383,6 +391,8 @@
         font-family: var(--menu-item);
         font-size: 14px;
     }
+
+
 
     @media (max-width: 900px) {
         .groot-scherm {
