@@ -255,23 +255,24 @@ blockquote::before {
     display: block;
 }
 
-.fade {
-    transition: opacity 0.5s;
-  }
-  
-  .fade-enter {
-    opacity: 0;
-  }
-  
-  .fade-enter.fade-enter-active {
-    opacity: 1;
-  }
-  
-  .fade-leave {
-    opacity: 1;
-  }
-  
-  .fade-leave.fade-leave-active {
-    opacity: 0;
-  }
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
 
+@keyframes slide-from-right {
+    from {
+        transform: translateX(100%);
+    }
+}
+
+:root::view-transition-old(root){
+    animation: 500ms ease-out both fade-out;
+
+}
+
+:root::view-transition-new(root){
+    animation: 500ms ease-out both slide-from-right;
+
+}

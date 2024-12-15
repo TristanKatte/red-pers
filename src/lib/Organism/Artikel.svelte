@@ -56,7 +56,6 @@
         width: 100%;
         height: 15em;
         border-bottom: var(--border);
-        view-transition-name: image;
     }
 
     h1 {
@@ -65,7 +64,6 @@
         font-size: var(--title-font-size);
         line-height: var(--title-font-line-height);
         letter-spacing: 0.25px;
-        view-transition-name: title;
     }
 
     .title {

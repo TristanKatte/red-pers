@@ -122,9 +122,7 @@
 
 <style>
 
-    header {
-        view-transition-name: header;
-    }
+
     #menuToggle {
         display: block;
         position: relative;
