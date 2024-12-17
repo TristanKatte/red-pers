@@ -11,6 +11,8 @@
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';
     import SearchBar from '$lib/Molecules/SearchBar.svelte';
+
+
 </script>
 
 <Header/>
@@ -45,6 +47,7 @@
 <Footer/>
 
 <style>
+
 
     h1 {
         text-align: center;
