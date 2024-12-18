@@ -87,6 +87,9 @@
     src: url("/fonts/TiemposHeadline-Medium.woff2") format("woff2");
   }
   /* #endregion Fonts */
+@view-transition {
+    navigation: auto;
+}
 
 body {
     background-color: var(--background-color);
@@ -268,23 +271,29 @@ blockquote::before {
 }
 
 @keyframes slide-from-right {
-	from {
-		transform: translateX(100%);
+	0% {
+		transform: translateX(101%);
 	}
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-101%);
+    }
+
+
 }
 
 @keyframes slide-to-left {
 	to {
-		transform: translateX(-30px);
+		transform: translateX(-101%);
 	}
 }
 
-:root::view-transition-old(root) {
-	animation: 500ms ease-out both fade-out;
-		
-}
 
-:root::view-transition-new(root) {
-	animation: 500ms ease-out both slide-from-right;
+:root::view-transition-group(background) {
+	animation: 1s ease-out both slide-from-right;
 }
 		

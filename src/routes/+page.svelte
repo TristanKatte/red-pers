@@ -6,6 +6,8 @@
         month: 'short',
         day: 'numeric',
     };
+
+
     
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';

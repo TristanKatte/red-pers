@@ -1,4 +1,5 @@
 <script>
+	import Geometric from '../lib/Organism/geometricTransition.svelte'
     import { onNavigate } from '$app/navigation';
 
 onNavigate((navigation) => {
@@ -16,5 +17,5 @@ onNavigate((navigation) => {
 <link rel="stylesheet" href="/global.css">
 
 
-
+<Geometric />
 <slot></slot>
