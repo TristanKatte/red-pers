@@ -16,11 +16,6 @@
     import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
   import { onMount } from "svelte";
-  let switchState = false;
-
-  function handleToggle(event) {
-    console.log('Switch state is now:', event.detail.isOn);
-  }
 
     let sticky = false;
     
@@ -94,8 +89,6 @@
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
             </a>
             <ul>
-                <li>CHIRSTMAS MODE</li>
-                <li><Switch bind:isOn={switchState} on:toggle={handleToggle} />
                 <li><Nieuwsbrief /></li>
                 <li><Donatiebtn /></li>
                 <li class="groot-search">
@@ -121,15 +114,6 @@
 </header>
 
 <style>
-
-@keyframes walk-left {
-    0% {
-        left: 100%; /* Start off the screen to the right */
-    }
-    100% {
-        left: -200px; /* Move off the screen to the left (considering image width) */
-    }
-}
     #menuToggle {
         display: block;
         position: relative;
