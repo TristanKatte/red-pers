@@ -87,9 +87,6 @@
     src: url("/fonts/TiemposHeadline-Medium.woff2") format("woff2");
   }
   /* #endregion Fonts */
-@view-transition {
-    navigation: auto;
-}
 
 body {
     background-color: var(--background-color);
@@ -258,7 +255,7 @@ blockquote::before {
     display: block;
 }
 
-/* @keyframes fade-in {
+@keyframes fade-in {
 	from {
 		opacity: 0;
 	}
@@ -294,6 +291,5 @@ blockquote::before {
 
 
 :root::view-transition-group(background) {
-	animation: 5.5s ease-out both slide-from-right;
-} */
-		
+	animation: 1s ease-out both slide-from-right;
+}
