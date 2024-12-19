@@ -8,13 +8,20 @@
     };
 
 
-    
+    import { onMount } from 'svelte';
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';
     import Artikel from '$lib/Organism/Artikel.svelte';
     import CategoryPreview from '$lib/Organism/CategoryPreview.svelte';
 
-
+    onMount(() => {
+        const audio = document.getElementById('christmas-audio');
+        if (audio) {
+            audio.play().catch((error) => {
+                console.error("Audio play failed:", error);
+            });
+        }
+    });
 
 
 </script>

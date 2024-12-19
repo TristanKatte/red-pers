@@ -2,6 +2,8 @@
     
 </script>
 
+<audio id="transition-sound" src="path/to/your/sound-file.mp3" preload="auto"></audio>
+
 <div class="background">
     
 </div>
