@@ -12,6 +12,8 @@ onNavigate((navigation) => {
 		});
 	});
 });
+
+
 </script>
 
 <link rel="stylesheet" href="/global.css">

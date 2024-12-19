@@ -14,12 +14,15 @@
     import Artikel from '$lib/Organism/Artikel.svelte';
     import CategoryPreview from '$lib/Organism/CategoryPreview.svelte';
 
+
+
 </script>
 
 <Header/>
 
 <div class="background">
     <main>
+       
         {#if data.posts}
             {#each data.posts as post}
                 <!-- @html means: there is html in this string, render it -->
@@ -34,6 +37,7 @@
             <CategoryPreview categoryName={category.name} categorySlug={category.slug} posts={category.posts} />
         {/each}
     </main>
+    
 </div>
 
 <Footer />
