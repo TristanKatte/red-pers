@@ -16,6 +16,11 @@
     import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
   import { onMount } from "svelte";
+  let switchState = false;
+
+  function handleToggle(event) {
+    console.log('Switch state is now:', event.detail.isOn);
+  }
 
     let sticky = false;
     
@@ -116,6 +121,15 @@
 </header>
 
 <style>
+
+@keyframes walk-left {
+    0% {
+        left: 100%; /* Start off the screen to the right */
+    }
+    100% {
+        left: -200px; /* Move off the screen to the left (considering image width) */
+    }
+}
     #menuToggle {
         display: block;
         position: relative;
