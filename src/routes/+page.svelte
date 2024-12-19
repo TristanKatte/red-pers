@@ -16,7 +16,15 @@
 
 
 
+
 </script>
+
+<audio id="christmas-audio" autoplay loop>
+    <source src="/we-wish-you-a-merry-christmas-128367.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
 
 <Header/>
 

@@ -291,5 +291,5 @@ blockquote::before {
 
 
 :root::view-transition-group(background) {
-	animation: 1s ease-out both slide-from-right;
+	animation: 4000ms ease-out both slide-from-right;
 }
