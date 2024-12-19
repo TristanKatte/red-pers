@@ -43,10 +43,24 @@
 }
 
 .quad-circle-1 {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    margin: 1.5em;
-    background-color: #1f400a;
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%
+}
+
+.quad-circle-2 {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-color: aqua;
+    border-radius: 0 0 240px 0;
+}
+
+.triangle-3 {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
 }
 </style>
