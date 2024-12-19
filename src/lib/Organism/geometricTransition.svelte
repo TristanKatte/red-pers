@@ -3,32 +3,7 @@
 </script>
 
 <div class="background">
-    <div class="quad-circle-2"></div>
-    <div class="triangle-1"></div>
-    <div class="quad-circle-2"></div>
-    <div class="triangle-2"></div>
-
-    <div class="quad-circle-1"></div>
-    <div class="square-1"></div>
-    <div class="triangle-2"></div>
-    <div class="square-1"></div>
     
-    <div class="quad-circle-1"></div>
-    <div class="triangle-1"></div>
-    <div class="quad-circle-2"></div>
-    <div class="quad-circle-1"></div>
-
-    <div class="quad-circle-3"></div>
-    <div class="quad-circle-4"></div>
-    <div class="quad-circle-2"></div>
-    <div class="triangle-3"></div>
-
-    <div class="square-1"></div>
-    <div class="triangle-4"></div>
-    <div class="square-1"></div>
-    <div class="quad-circle-1"></div>
-
-
 </div>
 
 <style>
@@ -39,28 +14,28 @@
     position: fixed;
     z-index: 99;
     view-transition-name: background;
-    /* transform: translateX(101%); */
+    transform: translateX(101%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    --s: 84px; /* control the size*/
+  --c1: #ffffff;
+  --c2: #a31e39;
+  --c3: #31570e;
+  
+  --_c:#0000,var(--c1) 1deg 79deg,#0000 81deg;
+  --g0:conic-gradient(from 140deg at 50% 87.5% ,var(--_c));
+  --g1:conic-gradient(from 140deg at 50% 81.25%,var(--_c));
+  --g2:conic-gradient(from 140deg at 50% 75%   ,var(--_c));
+  --g3:conic-gradient(at 10% 20%,#0000 75%,var(--c1) 0);
+  background:
+    var(--g0) 0 calc(var(--s)/-4),var(--g0) var(--s) calc(3*var(--s)/4),
+    var(--g1) ,var(--g1) var(--s) var(--s),
+    var(--g2) 0 calc(var(--s)/ 4),var(--g2) var(--s) calc(5*var(--s)/4),
+    var(--g3) calc( var(--s)/-10) var(--s),
+    var(--g3) calc(9*var(--s)/10) calc(2*var(--s)),
+    repeating-conic-gradient(from 45deg,var(--c2) 0 25%,var(--c3) 0 50%);
+  background-size: calc(2*var(--s)) calc(2*var(--s));
 }
 
-.quad-circle-1 {
-  width: 100px;
-  height: 100px;
-  background: red;
-  border-radius: 50%
-}
-
-.quad-circle-2 {
-    width: 100px;
-    height: 100px;
-    display: block;
-    background-color: aqua;
-    border-radius: 0 0 240px 0;
-}
-
-.triangle-3 {
-    width: 0;
-    height: 0;
-    border-top: 100px solid red;
-    border-right: 100px solid transparent;
-}
 </style>
