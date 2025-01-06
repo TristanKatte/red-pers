@@ -1,0 +1,43 @@
+<script>
+    
+</script>
+
+<audio id="transition-sound" src="path/to/your/sound-file.mp3" preload="auto"></audio>
+
+<div class="background">
+    
+</div>
+
+<style>
+.background {
+    background-color: #ffd97d;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    view-transition-name: background;
+    transform: translateX(101%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    --s: 84px; /* control the size*/
+  --c1: #ffffff;
+  --c2: #a31e39;
+  --c3: #31570e;
+  
+  --_c:#0000,var(--c1) 1deg 79deg,#0000 81deg;
+  --g0:conic-gradient(from 140deg at 50% 87.5% ,var(--_c));
+  --g1:conic-gradient(from 140deg at 50% 81.25%,var(--_c));
+  --g2:conic-gradient(from 140deg at 50% 75%   ,var(--_c));
+  --g3:conic-gradient(at 10% 20%,#0000 75%,var(--c1) 0);
+  background:
+    var(--g0) 0 calc(var(--s)/-4),var(--g0) var(--s) calc(3*var(--s)/4),
+    var(--g1) ,var(--g1) var(--s) var(--s),
+    var(--g2) 0 calc(var(--s)/ 4),var(--g2) var(--s) calc(5*var(--s)/4),
+    var(--g3) calc( var(--s)/-10) var(--s),
+    var(--g3) calc(9*var(--s)/10) calc(2*var(--s)),
+    repeating-conic-gradient(from 45deg,var(--c2) 0 25%,var(--c3) 0 50%);
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+</style>

@@ -6,18 +6,38 @@
         month: 'short',
         day: 'numeric',
     };
-    
+
+
+    import { onMount } from 'svelte';
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';
     import Artikel from '$lib/Organism/Artikel.svelte';
     import CategoryPreview from '$lib/Organism/CategoryPreview.svelte';
 
+    onMount(() => {
+        const audio = document.getElementById('christmas-audio');
+        if (audio) {
+            audio.play().catch((error) => {
+                console.error("Audio play failed:", error);
+            });
+        }
+    });
+
+
 </script>
+
+<audio id="christmas-audio" autoplay loop>
+    <source src="/we-wish-you-a-merry-christmas-128367.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
 
 <Header/>
 
 <div class="background">
     <main>
+       
         {#if data.posts}
             {#each data.posts as post}
                 <!-- @html means: there is html in this string, render it -->
@@ -32,6 +52,7 @@
             <CategoryPreview categoryName={category.name} categorySlug={category.slug} posts={category.posts} />
         {/each}
     </main>
+    
 </div>
 
 <Footer />

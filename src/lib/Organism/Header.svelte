@@ -16,6 +16,12 @@
     import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
   import { onMount } from "svelte";
+  import Knob from '$lib/Molecules/Knob.svelte';
+  let switchState = false;
+
+function handleToggle(event) {
+  console.log('Switch state is now:', event.detail.isOn);
+}
 
     let sticky = false;
     
@@ -89,6 +95,8 @@
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
             </a>
             <ul>
+                <li>XMAS MODE</li>
+                <li><Knob bind:isOn={switchState} on:toggle={handleToggle} />
                 <li><Nieuwsbrief /></li>
                 <li><Donatiebtn /></li>
                 <li class="groot-search">
