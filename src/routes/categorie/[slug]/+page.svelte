@@ -17,7 +17,9 @@
     {#if data.posts}
     {#each data.posts as post}
     <!-- @html means: there is html in this string, render it -->
-        <a href="/{post.slug}">
+        <div class="posts-grid">
+            <div class="post-container">
+            <a href="/{post.slug}">
             <h3>{@html post.title.rendered}</h3>
         </a>
         <p>{@html post.excerpt.rendered}</p>
@@ -25,6 +27,8 @@
         <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
         <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
         <p>{post.yoast_head_json.author}</p>
+        </div>
+    </div>
     {/each}
 {:else}
     <!-- This will show if no posts are available -->
@@ -33,3 +37,31 @@
 </main>
 
 <Footer />
+
+<style>
+  main {
+    border: 1px solid black;
+    padding: 1.5em;
+  }
+
+  .posts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #787878; 
+
+  }
+  
+.post-container {
+    padding-bottom: 1em; 
+    margin-bottom: 1em; 
+    
+}
+  
+  .post-container:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+
+</style>
